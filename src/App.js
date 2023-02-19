@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+
 import './App.css';
+
+import Navigation from './components/Navigation';
+import Profile from './components/Profile';
+import TweetList from './components/TweetList';
+import TweetForm from './components/TweetForm';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Profile />
+      <main className='container'>
+
+        <TweetForm />
+
+        <TweetList />
+        <div class="round-btn">
+          <i class="round-btn__icon fas fa-angle-double-up"></i>
+        </div>
+      </main>
+
+
     </div>
   );
 }
